@@ -46,6 +46,7 @@ function DarkSwitch({}: Props) {
       <DarkModeSwitch
         sunColor="#37253e"
         moonColor="white"
+        size={20}
         checked={isDarkMode}
         onChange={switchMode}
       />

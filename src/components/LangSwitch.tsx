@@ -1,21 +1,30 @@
 'use client';
 import React from 'react';
 import { Link, usePathname } from '@/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 type Props = {};
 
 function LangSwitch({}: Props) {
   const pathName = usePathname();
+  const currLocale = useLocale();
   const t = useTranslations('utils.lang');
+
   return (
-    <div className="flex flex-col">
-      <Link href={pathName} locale="kr">
-        {t('kr')}
-      </Link>
-      <Link href={pathName} locale="en">
-        {t('en')}
-      </Link>
+    <div className="h-full flex items-center">
+      {currLocale === 'en' ? (
+        <Link
+          href={pathName}
+          locale="kr"
+          className="animate-fade h-full flex items-center align-middle"
+        >
+          {t('en')}
+        </Link>
+      ) : (
+        <Link href={pathName} locale="en" className="animate-fade">
+          {t('kr')}
+        </Link>
+      )}
     </div>
   );
 }
