@@ -14,8 +14,8 @@
   --textColor: #37253e;
   --backGround: #eae4ed;
   /* backGround 후보 : edeaee */
-  font-family: 'GmarketSansMedium';
-  font-size: 18px;
+  /* font-family: 'GmarketSansMedium';
+  font-size: 18px; */
 }
 
 :root[class='dark'] {

@@ -42,11 +42,11 @@ function DarkSwitch({}: Props) {
     }
   }
   return (
-    <div className="flex justify-center bg-transparent">
+    <div className="flex items-center align-middle">
       <DarkModeSwitch
         sunColor="#37253e"
         moonColor="white"
-        size={20}
+        size={18}
         checked={isDarkMode}
         onChange={switchMode}
       />

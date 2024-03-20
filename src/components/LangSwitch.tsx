@@ -10,18 +10,16 @@ function LangSwitch({}: Props) {
   const currLocale = useLocale();
   const t = useTranslations('utils.lang');
 
+  const style: string = 'animate-fade text-sm';
+
   return (
-    <div className="h-full flex items-center">
+    <div className="flex items-center align-middle p-2 rounded-lg hover:bg-gray-400/10 ">
       {currLocale === 'en' ? (
-        <Link
-          href={pathName}
-          locale="kr"
-          className="animate-fade h-full flex items-center align-middle"
-        >
+        <Link href={pathName} locale="kr" className={style}>
           {t('en')}
         </Link>
       ) : (
-        <Link href={pathName} locale="en" className="animate-fade">
+        <Link href={pathName} locale="en" className={style}>
           {t('kr')}
         </Link>
       )}
