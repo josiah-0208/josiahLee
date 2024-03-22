@@ -1,15 +1,9 @@
-import Image from 'next/image';
+import Introduction from '@/components/Introduction';
 
 export default function About() {
   return (
-    <main className="flex flex-col dark:bg-bgColor">
-      <Image
-        className="rounded-3xl"
-        src={'/static/images/myProfile.jpg'}
-        alt="profileImage"
-        width={208}
-        height={208}
-      />
+    <main className="flex h-full w-full items-center justify-center">
+      <Introduction />
     </main>
   );
 }

@@ -14,20 +14,29 @@
   --textColor: #37253e;
   --backGround: #eae4ed;
   /* backGround 후보 : edeaee */
-  /* font-family: 'GmarketSansMedium';
-  font-size: 18px; */
+  --scndBackGround: white;
+  /* font-family: 'GmarketSansMedium';*/
+  font-size: 18px;
 }
 
 :root[class='dark'] {
   --textColor: white;
-  /* text 후보 : #eae4ed */
-  --backGround: #231a26;
-  /* backGround 후보 : 231a26, 262029, 37253e, 2b1f30 */
+  /* text 후보 : #eae4ed, */
+  --backGround: #29222f;
+  /* backGround 후보 : 231a26, 262029, 37253e, 2b1f30, #29222f */
+  --scndBackGround: #3d3245;
 }
 [data-theme='dark'] {
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 @layer utilities {

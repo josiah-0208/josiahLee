@@ -18,19 +18,20 @@ export default function RootLayout({
   params: { locale: string };
 }>) {
   // 다크모드 필요 시
-  // const settingModeScript = `
-  // if (localStorage.theme === 'dark' || (!('theme' in localStorage)
-  // && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  //   document.documentElement.classList.add('dark')
-  // } else {
-  //   document.documentElement.classList.remove('dark')
-  // }
-  // `;
+  const settingModeScript = `
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage)
+  && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+  `;
   // body 안에 <script dangerouslySetInnerHTML={{ __html: settingModeScript }} /> 추가하기
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="bg-bgColor text-textColor">
+        <script dangerouslySetInnerHTML={{ __html: settingModeScript }} />
         <ThemeProvider attribute="class">
           <Header locale={locale} />
           {children}

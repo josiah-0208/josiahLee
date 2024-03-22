@@ -13,7 +13,7 @@ const config: Config = {
       },
       colors: {
         bgColor: 'var(--backGround)',
-        // scndBgColor: 'var()'
+        scndBgColor: 'var(--scndBackGround)',
         textColor: 'var(--textColor)',
         // scndTextColor: 'var()'
       },
