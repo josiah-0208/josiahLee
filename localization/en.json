@@ -3,7 +3,18 @@
     "text_1": "I'm Hyunsoo, a developer with a keen eye for aesthetics. Currently,  ",
     "text_2": "I'm working with RaySlon, serving as a web admin and app developer at LG Electronics.",
     "text_3": "My expertise lies in frontend technologies like JavaScript, React, and Next.js, though I've also dabbled in backend technologies. ",
-    "text_4": "My interests include: The beauty of mountains, trees, the moon, snow, and sunsets.Lately, I find myself thinking often about Nasi Goreng, crepes, and donuts.I'm deeply fascinated by the potential of GPT-4,",
+    "text_4": {
+      "_1": "제가,,, \n\n‣ 좋아하는 것들은요. ",
+      "_2": "산과 ",
+      "_3": "나무들, ",
+      "_4": "달, ",
+      "_5": "눈 ",
+      "_6": "같은 자연을 좋아해요. 요즘엔 ",
+      "_7": "나시고랭, ",
+      "_8": "크레이프, ",
+      "_9": "도넛",
+      "_10": "을 자주 떠올립니다. GPT-4의 도움을 받는 것에 관심이 많습니다."
+    },
     "text_5": "and though I don't consider myself exceptionally talented, I'm confident in my abilities. I'm inspired by the phrases \"We will find a way, We always have\" and \"Because there's a mountain there.\" I prefer the steady progress of walking towards my goals over running, and I work better in a relaxed environment than under pressure. Often, the best ideas come to me the following day."
   },
   "career": {},

@@ -27,7 +27,6 @@ export default function RootLayout({
   }
   `;
   // body 안에 <script dangerouslySetInnerHTML={{ __html: settingModeScript }} /> 추가하기
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="bg-bgColor text-textColor">
