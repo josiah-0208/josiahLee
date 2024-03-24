@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import HoverATag from './HoverATag';
 
 type Props = {};
 
@@ -28,47 +29,27 @@ function Introduction({}: Props) {
       <div className="rounded-xl border-textColor p-6 bg-scndBgColor">
         <p className="whitespace-pre-wrap ">
           {t('text_4._1')}
-          <a
-            className="cursor-pointer inline-block animate-wiggle animate-infinite animate-delay-[5000ms] animate-ease-out"
-            onMouseEnter={() => {
-              setImgUrl('/static/images/mountain.jpg');
-            }}
-            onMouseLeave={() => {
-              setImgUrl('/static/images/myProfile.jpg');
-            }}
-          >
-            {t('text_4._2')}
-          </a>
-          <a
-            onMouseEnter={() => {
-              setImgUrl('/static/images/tree.jpg');
-            }}
-            onMouseLeave={() => {
-              setImgUrl('/static/images/myProfile.jpg');
-            }}
-          >
-            {t('text_4._3')}
-          </a>
-          <a
-            onMouseEnter={() => {
-              setImgUrl('/static/images/moon.jpg');
-            }}
-            onMouseLeave={() => {
-              setImgUrl('/static/images/myProfile.jpg');
-            }}
-          >
-            {t('text_4._4')}
-          </a>
-          <a
-            onMouseEnter={() => {
-              setImgUrl('/static/images/snow.jpg');
-            }}
-            onMouseLeave={() => {
-              setImgUrl('/static/images/myProfile.jpg');
-            }}
-          >
-            {t('text_4._5')}
-          </a>
+          <HoverATag
+            text={t('text_4._2')}
+            setImgUrl={setImgUrl}
+            onEnterUrl="/static/images/mountain.jpg"
+          />
+          <HoverATag
+            text={t('text_4._3')}
+            setImgUrl={setImgUrl}
+            onEnterUrl="/static/images/tree.jpg"
+          />
+          <HoverATag
+            text={t('text_4._4')}
+            setImgUrl={setImgUrl}
+            onEnterUrl="/static/images/moon.jpg"
+          />
+          <HoverATag
+            text={t('text_4._5')}
+            setImgUrl={setImgUrl}
+            onEnterUrl="/static/images/snow.jpg"
+          />
+
           {t('text_4._6')}
           <a>{t('text_4._7')}</a>
           <a>{t('text_4._8')}</a>
