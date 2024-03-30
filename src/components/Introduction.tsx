@@ -1,20 +1,27 @@
 'use client';
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import React, { useState } from 'react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import mockData from '../data/mock.json';
 import HoverATag from './HoverATag';
+import IconLink from './IconLink';
+import Toast from './Toast';
 
 type Props = {};
 
 function Introduction({}: Props) {
   const t = useTranslations('about');
-  const [imgUrl, setImgUrl] = useState('/static/images/myProfile.jpg');
+  const [profileImgUrl, setProfileImgUrl] = useState(
+    '/static/images/myProfile.jpg'
+  );
+  const linkIconData = mockData.linkIconData;
+
   return (
-    <div className="max-w-[768px] flex flex-col gap-8">
+    <div className="max-w-[768px] flex flex-col gap-[32px]">
       <div className="flex gap-8 items-center">
         <Image
           className="rounded-3xl"
-          src={imgUrl}
+          src={profileImgUrl}
           alt="profileImage"
           width={216}
           height={216}
@@ -26,38 +33,52 @@ function Introduction({}: Props) {
           <div></div>
         </div>
       </div>
-      <div className="rounded-xl border-textColor p-6 bg-scndBgColor">
-        <p className="whitespace-pre-wrap ">
-          {t('text_4._1')}
-          <HoverATag
-            text={t('text_4._2')}
-            setImgUrl={setImgUrl}
-            onEnterUrl="/static/images/mountain.jpg"
-          />
-          <HoverATag
-            text={t('text_4._3')}
-            setImgUrl={setImgUrl}
-            onEnterUrl="/static/images/tree.jpg"
-          />
-          <HoverATag
-            text={t('text_4._4')}
-            setImgUrl={setImgUrl}
-            onEnterUrl="/static/images/moon.jpg"
-          />
-          <HoverATag
-            text={t('text_4._5')}
-            setImgUrl={setImgUrl}
-            onEnterUrl="/static/images/snow.jpg"
-          />
+      <div className="flex gap-[32px]">
+        <div className=" p-[28px]  w-[672px]">
+          <p className="whitespace-pre-wrap ">
+            {t('text_4._1')}
+            <HoverATag
+              text={t('text_4._2')}
+              setImgUrl={setProfileImgUrl}
+              onEnterUrl="/static/images/mountain.jpg"
+            />
+            <HoverATag
+              text={t('text_4._3')}
+              setImgUrl={setProfileImgUrl}
+              onEnterUrl="/static/images/tree.jpg"
+            />
+            <HoverATag
+              text={t('text_4._4')}
+              setImgUrl={setProfileImgUrl}
+              onEnterUrl="/static/images/moon.jpg"
+            />
+            <HoverATag
+              text={t('text_4._5')}
+              setImgUrl={setProfileImgUrl}
+              onEnterUrl="/static/images/snow.jpg"
+            />
 
-          {t('text_4._6')}
-          <a>{t('text_4._7')}</a>
-          <a>{t('text_4._8')}</a>
-          <a>{t('text_4._9')}</a>
-          {t('text_4._10')}
-        </p>
-        <p className="whitespace-pre-wrap">{t('text_5')}</p>
+            {t('text_4._6')}
+            <a>{t('text_4._7')}</a>
+            <a>{t('text_4._8')}</a>
+            <a>{t('text_4._9')}</a>
+            {t('text_4._10')}
+          </p>
+          <p className="whitespace-pre-wrap">{t('text_5')}</p>
+        </div>
+        <div className="w-[108px] flex flex-wrap justify-evenly items-center">
+          {linkIconData.map((icon) => (
+            <IconLink
+              src={icon.src}
+              alt={icon.alt}
+              width={icon.width}
+              height={icon.height}
+              key={icon.alt}
+            />
+          ))}
+        </div>
       </div>
+      <Toast />
     </div>
   );
 }

@@ -1,0 +1,36 @@
+{
+  "linkIconData": [
+    {
+      "src": "/static/images/icon_google.svg",
+      "alt": "google icon",
+      "width": 32,
+      "height": 32,
+      "content": "lhyunsoo0208@gmail.com"
+    },
+    {
+      "src": "/static/images/icon_naver.svg",
+      "alt": "naver icon",
+      "width": 32,
+      "height": 32,
+      "content": "beth_shan@naver.com"
+    },
+    {
+      "src": "/static/images/icon_github.svg",
+      "alt": "github icon",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "src": "/static/images/icon_linkedin.svg",
+      "alt": "linkedin icon",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "src": "/static/images/icon_tistory.svg",
+      "alt": "tistory icon",
+      "width": 32,
+      "height": 32
+    }
+  ]
+}
