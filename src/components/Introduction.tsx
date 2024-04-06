@@ -73,12 +73,13 @@ function Introduction({}: Props) {
               alt={icon.alt}
               width={icon.width}
               height={icon.height}
+              url={icon.url}
               key={icon.alt}
             />
           ))}
         </div>
       </div>
-      <Toast />
+      {/* <Toast /> */}
     </div>
   );
 }

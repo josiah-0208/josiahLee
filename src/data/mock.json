@@ -5,32 +5,35 @@
       "alt": "google icon",
       "width": 32,
       "height": 32,
-      "content": "lhyunsoo0208@gmail.com"
+      "url": "lhyunsoo0208@gmail.com"
     },
     {
       "src": "/static/images/icon_naver.svg",
       "alt": "naver icon",
       "width": 32,
       "height": 32,
-      "content": "beth_shan@naver.com"
+      "url": "beth_shan@naver.com"
     },
     {
       "src": "/static/images/icon_github.svg",
       "alt": "github icon",
       "width": 32,
-      "height": 32
+      "height": 32,
+      "url": "https://github.com/josiah-0208"
     },
     {
       "src": "/static/images/icon_linkedin.svg",
       "alt": "linkedin icon",
       "width": 32,
-      "height": 32
+      "height": 32,
+      "url": "https://www.linkedin.com/in/%ED%98%84%EC%88%98-%EC%9D%B4-406594288/"
     },
     {
       "src": "/static/images/icon_tistory.svg",
       "alt": "tistory icon",
       "width": 32,
-      "height": 32
+      "height": 32,
+      "url": "https://josiah0208.tistory.com/"
     }
   ]
 }
