@@ -9,3 +9,7 @@
 - 테일윈드 기본 다크모드를 사용하였으나, next-themes의 app 디렉터리 지원을 사용하니 문제가 해결됐다.
 - next intl은 문서를 새로 받아온다. 기존 body 태그 class에 dark를 붙
 - https://github.com/amannn/next-intl/discussions/370
+
+토스트 팝업
+
+- 리액트 createPortal을 이용해서 직접 구현하였습니다.

@@ -13,8 +13,8 @@ function HoverATag({ text, setImgUrl, onEnterUrl, onLeaveUrl }: Props) {
 
   function getStyle() {
     setTimeout(() => {
-      setStyle(style + ' animate-once animate-pulse animate-ease-in');
-    }, Math.floor(Math.random() * 23) * 1000);
+      setStyle(style + ' animate-once animate-jump animate-ease-in');
+    }, Math.floor(Math.random() * 45) * 1000);
   }
 
   useEffect(() => {
