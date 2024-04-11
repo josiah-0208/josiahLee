@@ -15,7 +15,7 @@ function IconLink({ src, alt, width, height, url, onClickEvent }: Props) {
   return (
     <div
       onClick={() => {
-        onClickEvent ? onClickEvent(url) : null;
+        onClickEvent && onClickEvent(url);
       }}
     >
       <Image src={src} alt={alt ?? 'icon'} width={width} height={height} />

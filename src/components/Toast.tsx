@@ -1,11 +1,11 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 type Props = {};
 
 function Toast({}: Props) {
-  // 연속 터치를 block 하자
   const [portalContent, setPortalContent] = useState<React.ReactPortal | null>(
     null
   );
@@ -19,17 +19,18 @@ function Toast({}: Props) {
 export default Toast;
 
 function ToastUI(): React.JSX.Element {
+  const t = useTranslations('utils');
   const [style, setStyle] = useState(
-    'fixed bottom-4 w-full text-center animate-jump-in'
+    'fixed bottom-4 w-full text-center animate-fade'
   );
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setStyle('fixed bottom-4 w-full text-center animate-jump-out');
-    }, 2600);
+      setStyle('fixed bottom-4 w-full text-center animate-fadeOut');
+    }, 1700);
 
     return () => clearTimeout(timer);
   });
 
-  return <div className={style}>🌲 Copied to clipboard 🌲</div>;
+  return <div className={style}>🌲 {t('toast')} 🌲</div>;
 }

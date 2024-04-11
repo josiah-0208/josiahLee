@@ -13,9 +13,18 @@ const config: Config = {
       },
       colors: {
         bgColor: 'var(--backGround)',
-        scndBgColor: 'var(--scndBackGround)',
+        secondColor: 'var(--secondColor)',
         textColor: 'var(--textColor)',
-        // scndTextColor: 'var()'
+        borderColor: 'var(--borderColor)',
+      },
+      keyframes: {
+        fadeOut: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
+      animation: {
+        fadeOut: 'fadeOut 1s ease-in-out forwards',
       },
     },
   },

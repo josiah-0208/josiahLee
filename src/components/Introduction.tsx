@@ -10,6 +10,7 @@ import Toast from './Toast';
 type Props = {};
 
 function Introduction({}: Props) {
+  console.log('다시 돌아감');
   const t = useTranslations('about');
   const [profileImgUrl, setProfileImgUrl] = useState(
     '/static/images/myProfile.jpg'
@@ -18,26 +19,27 @@ function Introduction({}: Props) {
   const linkIconData = mockData.linkIconData;
   let wait: undefined | NodeJS.Timeout = undefined;
 
+  // 아이콘 눌림 이벤트
   function clickIconLink(url: string) {
     if (wait === undefined) {
-      navigator.clipboard.writeText(url ?? 'Hi :)');
-      if (url?.startsWith('http')) {
+      navigator.clipboard.writeText(url);
+      if (url.startsWith('http')) {
         window.open(url);
       }
       setOnToast(true);
       wait = setTimeout(() => {
-        if (onToast === true) {
+        if (onToast === false) {
           setOnToast(false);
           wait = undefined;
         }
-      }, 2800);
+      }, 2700);
     }
   }
 
   return (
     <>
-      <div className="max-w-[768px] flex flex-col gap-[32px]">
-        <div className="flex gap-8 items-center">
+      <div className="max-w-[784px] flex flex-col gap-[32px]">
+        <div className="flex items-center gap-[32px]">
           <Image
             className="rounded-3xl"
             src={profileImgUrl}
@@ -45,17 +47,17 @@ function Introduction({}: Props) {
             width={216}
             height={216}
           />
-          <div className="flex flex-col gap-2 h-48">
+          <div className="flex flex-col gap-2">
             <p className="whitespace-pre-wrap">{t('text_1')}</p>
             <p className="whitespace-pre-wrap">{t('text_2')}</p>
             <p className="whitespace-pre-wrap">{t('text_3')}</p>
             <div></div>
           </div>
         </div>
-        <div className="flex gap-[32px]">
-          <div className=" p-[28px]  w-[672px]">
+        <div className="flex justify-end items-center gap-[32px]">
+          <div className="w-[532px] flex flex-col gap-2">
             <p className="whitespace-pre-wrap ">
-              {t('text_4._1')}
+              {/* <span className="text-2xl">{t('text_4._1')}</span> */}
               <HoverATag
                 text={t('text_4._2')}
                 setImgUrl={setProfileImgUrl}
@@ -85,7 +87,7 @@ function Introduction({}: Props) {
             </p>
             <p className="whitespace-pre-wrap">{t('text_5')}</p>
           </div>
-          <div className="w-[108px] flex flex-wrap justify-evenly items-center">
+          <div className="w-[220px] h-[220px] flex flex-wrap justify-evenly items-center bg-secondColor rounded-2xl border-2 border-borderColor">
             {linkIconData.map((icon) => (
               <IconLink
                 src={icon.src}
