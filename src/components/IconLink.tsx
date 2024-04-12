@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import Toast from './Toast';
 
 type Props = {
   src: string;
@@ -14,6 +13,7 @@ type Props = {
 function IconLink({ src, alt, width, height, url, onClickEvent }: Props) {
   return (
     <div
+      className="inline-block"
       onClick={() => {
         onClickEvent && onClickEvent(url);
       }}

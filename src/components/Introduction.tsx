@@ -38,14 +38,14 @@ function Introduction({}: Props) {
   return (
     <>
       <div className="max-w-[784px] flex flex-col gap-[32px]">
-        <div className="flex items-top gap-[32px]">
+        <div className="flex items-center gap-[32px]">
           {/* <div className="w-[216px] h-[216px]"> */}
           <Image
             className="rounded-3xl"
             src={profileImgUrl}
             alt="profileImage"
-            width={216}
-            height={216}
+            width={224}
+            height={224}
           />
           {/* </div> */}
           <div className="flex flex-col gap-2.5">
@@ -55,60 +55,59 @@ function Introduction({}: Props) {
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_4')}</p>
           </div>
         </div>
-        <div className="flex justify-end items-end gap-[32px]">
-          <div className="w-[532px] flex flex-col gap-2.5">
+        <div className="flex justify-end items-center gap-[32px]">
+          <div className="w-[528px] flex flex-col gap-2.5">
             <p className="whitespace-pre-wrap leading-relaxed break-all">
+              {t('text_5._1')}
               <HoverATag
-                text={t('text_6.var_1')}
+                text={t('text_5.var_1')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/mountain.jpg"
               />
-              과&nbsp;
+              {t('text_5._2')}&nbsp;
               <HoverATag
-                text={t('text_6.var_2')}
+                text={t('text_5.var_2')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/tree.jpg"
               />
               ,&nbsp;
               <HoverATag
-                text={t('text_6.var_3')}
+                text={t('text_5.var_3')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/moon.jpg"
               />
               ,&nbsp;
               <HoverATag
-                text={t('text_6.var_4')}
+                text={t('text_5.var_4')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/snow.jpg"
               />
               &nbsp;
-              {t('text_6._2')}
+              {t('text_5._3')}
               <HoverATag
-                text={t('text_6.var_5')}
+                text={t('text_5.var_5')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/nasi.jpg"
               />
               ,&nbsp;
               <HoverATag
-                text={t('text_6.var_6')}
+                text={t('text_5.var_6')}
                 setImgUrl={setProfileImgUrl}
-                onEnterUrl="/static/images/crepe.jpg"
+                onEnterUrl="/static/images/crepe.png"
               />
               ,&nbsp;
               <HoverATag
-                text={t('text_6.var_7')}
+                text={t('text_5.var_7')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/donut.png"
               />
-              {t('text_6._3')}
+              {t('text_5._4')}
             </p>
+            <p className="whitespace-pre-wrap leading-relaxed">{t('text_6')}</p>
+            <p className="whitespace-pre-wrap leading-relaxed">{t('text_7')}</p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_8')}</p>
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_9')}</p>
-            <p className="whitespace-pre-wrap leading-relaxed">
-              {t('text_10')}
-            </p>
           </div>
-          <div className="w-[220px] h-[220px] flex flex-wrap justify-evenly items-center bg-secondColor rounded-2xl border-2 border-borderColor">
+          <div className="w-[224px] h-[224px] flex flex-wrap justify-evenly items-center bg-secondColor rounded-2xl border-2 border-borderColor">
             {linkIconData.map((icon) => (
               <IconLink
                 src={icon.src}

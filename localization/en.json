@@ -1,21 +1,25 @@
 {
   "about": {
-    "text_1": "I'm Hyunsoo, a developer with a keen eye for aesthetics. Currently,  ",
-    "text_2": "I'm working with RaySlon, serving as a web admin and app developer at LG Electronics.",
-    "text_3": "My expertise lies in frontend technologies like JavaScript, React, and Next.js, though I've also dabbled in backend technologies. ",
-    "text_4": {
-      "_1": "제가,,, \n\n‣ 좋아하는 것들은요. ",
-      "_2": "산과 ",
-      "_3": "나무들, ",
-      "_4": "달, ",
-      "_5": "눈 ",
-      "_6": "같은 자연을 좋아해요. 요즘엔 ",
-      "_7": "나시고랭, ",
-      "_8": "크레이프, ",
-      "_9": "도넛",
-      "_10": "을 자주 떠올립니다. GPT-4의 도움을 받는 것에 관심이 많습니다."
+    "text_1": "I'm Hyunsoo, a developer seeking charming interfaces.",
+    "text_2": "I recently worked at LG Electronics as a web and app developer, employed by Rayslon Company.",
+    "text_3": "I'm confident in front-end technologies like JavaScript, React, and Next, but I also have experience with back-end technologies.",
+    "text_4": "I may not be exceptionally talented, but I will do well.",
+    "text_5": {
+      "_1": "I love nature like ",
+      "_2": ",",
+      "_3": "lately, I find myself often thinking about ",
+      "_4": "을 자주 떠올립니다.",
+      "var_1": "mountains",
+      "var_2": "trees",
+      "var_3": "the moon",
+      "var_4": "and snow",
+      "var_5": "nasi goreng",
+      "var_6": "mille crepe",
+      "var_7": "donut"
     },
-    "text_5": "and though I don't consider myself exceptionally talented, I'm confident in my abilities. I'm inspired by the phrases \"We will find a way, We always have\" and \"Because there's a mountain there.\" I prefer the steady progress of walking towards my goals over running, and I work better in a relaxed environment than under pressure. Often, the best ideas come to me the following day."
+    "text_6": "GPT-4의 도움을 받는 것에 관심이 많습니다.",
+    "text_7": "목표를 향해 땀흘리며 뛰는 것보다는, 꾸준하게 걸어 나아가는 편입니다.",
+    "text_8": "언더프레셔 보다는 여유에서 일을 더 잘합니다. 좋은 방법은 다음날 떠오를 때가 많더라구요:)"
   },
   "career": {},
   "utils": {
