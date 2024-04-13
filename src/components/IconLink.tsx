@@ -13,12 +13,18 @@ type Props = {
 function IconLink({ src, alt, width, height, url, onClickEvent }: Props) {
   return (
     <div
-      className="inline-block"
+      className="inline-block cursor-pointer duration-300 ease-out hover:scale-[1.07]"
       onClick={() => {
         onClickEvent && onClickEvent(url);
       }}
     >
-      <Image src={src} alt={alt ?? 'icon'} width={width} height={height} />
+      <Image
+        src={src}
+        alt={alt ?? 'icon'}
+        width={width}
+        height={height}
+        style={{ width: width, height: height }}
+      />
     </div>
   );
 }

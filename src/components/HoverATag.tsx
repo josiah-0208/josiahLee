@@ -18,7 +18,7 @@ function HoverATag({ text, setImgUrl, onEnterUrl, onLeaveUrl }: Props) {
       } else {
         setStyle(style + ' animate-once animate-pulse animate-ease-in');
       }
-    }, Math.floor(Math.random() * 27) * 1000);
+    }, Math.floor(Math.random() * 23) * 1000);
   }
 
   useEffect(() => {

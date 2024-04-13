@@ -28,7 +28,6 @@ function DarkSwitch({}: Props) {
 
   function switchMode(bool: boolean) {
     // true가 달모양, false가 해모양이다
-    console.log(bool);
     setIsDarkMode(bool);
     if (bool === true) {
       document.documentElement.classList.add('dark');
@@ -42,7 +41,7 @@ function DarkSwitch({}: Props) {
     }
   }
   return (
-    <div className="flex items-center align-middle">
+    <div className="p-2 flex items-center align-middle animate-fade rounded-lg transition-background-color duration-300 hover:bg-gray-400/10">
       <DarkModeSwitch
         sunColor="#37253e"
         moonColor="white"

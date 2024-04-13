@@ -14,8 +14,9 @@ const config: Config = {
       colors: {
         bgColor: 'var(--backGround)',
         secondColor: 'var(--secondColor)',
-        textColor: 'var(--textColor)',
         borderColor: 'var(--borderColor)',
+        textColor: 'var(--textColor)',
+        highlightTextColor: 'var(--highlightTextColor)',
       },
       keyframes: {
         fadeOut: {

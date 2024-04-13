@@ -37,18 +37,20 @@ function Introduction({}: Props) {
 
   return (
     <>
-      <div className="max-w-[784px] flex flex-col gap-[32px]">
+      <div className="max-w-[784px] flex flex-col gap-[32px] animate-fade">
         <div className="flex items-center gap-[32px]">
-          {/* <div className="w-[216px] h-[216px]"> */}
-          <Image
-            className="rounded-3xl"
-            src={profileImgUrl}
-            alt="profileImage"
-            width={224}
-            height={224}
-          />
-          {/* </div> */}
-          <div className="flex flex-col gap-2.5">
+          <div className="w-[224px] h-[224px] flex items-center justify-center">
+            <Image
+              className="rounded-3xl transition-all duration-300 ease-out hover:scale-[1.01] hover:shadow-lg"
+              src={profileImgUrl}
+              alt="profileImage"
+              width={224}
+              height={224}
+              style={{ width: '224px', height: '224px' }}
+              priority
+            />
+          </div>
+          <div className="w-[528px] flex flex-col gap-2.5">
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_1')}</p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_2')}</p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_3')}</p>
@@ -107,18 +109,35 @@ function Introduction({}: Props) {
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_7')}</p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_8')}</p>
           </div>
-          <div className="w-[224px] h-[224px] flex flex-wrap justify-evenly items-center bg-secondColor rounded-2xl border-2 border-borderColor">
-            {linkIconData.map((icon) => (
-              <IconLink
-                src={icon.src}
-                alt={icon.alt}
-                width={icon.width}
-                height={icon.height}
-                url={icon.url}
-                onClickEvent={clickIconLink}
-                key={icon.alt}
-              />
-            ))}
+          <div className="w-[224px] h-[224px] flex flex-col justify-evenly bg-secondColor rounded-2xl border-2 border-borderColor">
+            <div className="flex justify-evenly">
+              {linkIconData.slice(0, 2).map((icon) => (
+                <IconLink
+                  src={icon.src}
+                  alt={icon.alt}
+                  width={icon.width}
+                  height={icon.height}
+                  url={icon.url}
+                  onClickEvent={clickIconLink}
+                  key={icon.alt}
+                />
+              ))}
+              {/* 디자인을 위해서 빈 요소 */}
+              <div className="w-8 h-8"></div>
+            </div>
+            <div className="flex justify-evenly">
+              {linkIconData.slice(2, 5).map((icon) => (
+                <IconLink
+                  src={icon.src}
+                  alt={icon.alt}
+                  width={icon.width}
+                  height={icon.height}
+                  url={icon.url}
+                  onClickEvent={clickIconLink}
+                  key={icon.alt}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -128,3 +147,63 @@ function Introduction({}: Props) {
 }
 
 export default Introduction;
+
+console.log(
+  `%c
+  ██     ██ ███████                                  
+  ██     ██ ██                                       
+  ██  █  ██ █████                                    
+  ██ ███ ██ ██                                       
+   ███ ███  ███████                                  
+                                                     
+                                                     
+  ██     ██ ██ ██      ██                            
+  ██     ██ ██ ██      ██                            
+  ██  █  ██ ██ ██      ██                            
+  ██ ███ ██ ██ ██      ██                            
+   ███ ███  ██ ███████ ███████                       
+                                                     
+                                                     
+  ███████ ██ ███    ██ ██████                        
+  ██      ██ ████   ██ ██   ██                       
+  █████   ██ ██ ██  ██ ██   ██                       
+  ██      ██ ██  ██ ██ ██   ██                       
+  ██      ██ ██   ████ ██████                        
+                                                     
+                                                     
+   █████                                             
+  ██   ██                                            
+  ███████                                            
+  ██   ██                                            
+  ██   ██                                            
+                                                     
+                                                     
+  ██     ██  █████  ██    ██                         
+  ██     ██ ██   ██  ██  ██                          
+  ██  █  ██ ███████   ████                           
+  ██ ███ ██ ██   ██    ██                            
+   ███ ███  ██   ██    ██    ▄█                      
+                                                     
+                                                     
+  ██     ██ ███████                                  
+  ██     ██ ██                                       
+  ██  █  ██ █████                                    
+  ██ ███ ██ ██                                       
+   ███ ███  ███████                                  
+                                                     
+                                                     
+   █████  ██      ██     ██  █████  ██    ██ ███████ 
+  ██   ██ ██      ██     ██ ██   ██  ██  ██  ██      
+  ███████ ██      ██  █  ██ ███████   ████   ███████ 
+  ██   ██ ██      ██ ███ ██ ██   ██    ██         ██ 
+  ██   ██ ███████  ███ ███  ██   ██    ██    ███████ 
+                                                     
+                                                     
+  ██   ██  █████  ██    ██ ███████                   
+  ██   ██ ██   ██ ██    ██ ██                        
+  ███████ ███████ ██    ██ █████                     
+  ██   ██ ██   ██  ██  ██  ██                        
+  ██   ██ ██   ██   ████   ███████                   
+  `,
+  'color:orange'
+);

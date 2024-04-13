@@ -13,7 +13,7 @@ function LangSwitch({}: Props) {
   const style: string = 'animate-fade text-sm';
 
   return (
-    <div className="flex items-center align-middle p-2 rounded-lg hover:bg-gray-400/10 ">
+    <div className="p-2 flex items-center align-middle rounded-lg transition-background-color duration-300 hover:bg-gray-400/10">
       {currLocale === 'en' ? (
         <Link href={pathName} locale="kr" className={style}>
           {t('en')}

@@ -10,24 +10,37 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2')
+    format('woff2');
+  font-style: normal;
+}
+
 :root {
-  --backGround: #eae4ed;
-  /* backGround 후보 : edeaee */
-  --secondColor: #efebf1;
-  /* font-family: 'GmarketSansMedium'; */
+  font-family: 'SUITE-Regular';
+  font-weight: 400;
+  --backGround: #e3dfe5;
+  /* backGround 후보 : e3dfe5, edeaee, ede8f0, f3eef6 */
+  --secondColor: #ecb653;
+  /* secondColor 후보 : ecb653, a96cc8*/
   --textColor: #37253e;
-  --borderColor: #392f40;
-  /* borderColor 후보 : 37253e,  */
+  --highlightTextColor: '#b387cf';
+  /* highlightTextColor 후보 : b387cf, a087cf */
+  --borderColor: #ecb653;
+  /* borderColor 후보 : 392f40, 37253e, ecb653, a96cc8 */
   font-size: 18px;
 }
 
 :root[class='dark'] {
   --backGround: #262029;
   /* backGround 후보 : 29222f, 262029 */
-  --secondColor: #392f40;
-  /* secondColor 후보 : 3d3245, 392f40  */
+  --secondColor: #42374a;
+  /* secondColor 후보 : 392f40, 43384b, 42374a  */
   --textColor: white;
   /* textColor 후보 : #eae4ed, */
+  --highlightTextColor: '#b387cf';
+  /* highlightTextColor 후보 : b387cf, ac87cf, a087cf */
   --borderColor: white;
 }
 [data-theme='dark'] {
