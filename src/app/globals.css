@@ -16,7 +16,8 @@
   --secondColor: #efebf1;
   /* font-family: 'GmarketSansMedium'; */
   --textColor: #37253e;
-  --borderColor: #37253e;
+  --borderColor: #392f40;
+  /* borderColor 후보 : 37253e,  */
   font-size: 18px;
 }
 

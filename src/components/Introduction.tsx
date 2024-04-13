@@ -87,7 +87,7 @@ function Introduction({}: Props) {
               <HoverATag
                 text={t('text_5.var_5')}
                 setImgUrl={setProfileImgUrl}
-                onEnterUrl="/static/images/nasi.jpg"
+                onEnterUrl="/static/images/nasi.png"
               />
               ,&nbsp;
               <HoverATag

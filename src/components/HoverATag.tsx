@@ -9,17 +9,23 @@ type Props = {
 };
 
 function HoverATag({ text, setImgUrl, onEnterUrl, onLeaveUrl }: Props) {
-  const [style, setStyle] = useState(`cursor-pointer inline-block`);
+  const [style, setStyle] = useState('cursor-pointer inline-block');
 
   function getStyle() {
-    setTimeout(() => {
-      setStyle(style + ' animate-once animate-pulse animate-ease-in');
-    }, Math.floor(Math.random() * 17) * 1000);
+    return setTimeout(() => {
+      if (style.includes('animate-pulse')) {
+        setStyle('cursor-pointer inline-block');
+      } else {
+        setStyle(style + ' animate-once animate-pulse animate-ease-in');
+      }
+    }, Math.floor(Math.random() * 27) * 1000);
   }
 
   useEffect(() => {
-    getStyle();
-  }, []);
+    const timer = getStyle();
+
+    return () => clearTimeout(timer);
+  }, [style]);
 
   return (
     <a
