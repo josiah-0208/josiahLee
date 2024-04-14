@@ -6,19 +6,36 @@ type Props = {
   setImgUrl: React.Dispatch<React.SetStateAction<string>>;
   onEnterUrl: string;
   onLeaveUrl?: string;
+  highlight?: boolean;
 };
 
-function HoverATag({ text, setImgUrl, onEnterUrl, onLeaveUrl }: Props) {
-  const [style, setStyle] = useState('cursor-pointer inline-block');
+function HoverATag({
+  text,
+  setImgUrl,
+  onEnterUrl,
+  onLeaveUrl,
+  highlight,
+}: Props) {
+  const defaultStyle = `cursor-pointer inline-block ${
+    highlight ? 'text-highlightTextColor' : ''
+  }`;
+  const animationStyle = `${
+    defaultStyle +
+    ' animate-once animate-pulse animate-ease-in ' +
+    (highlight ? 'text-highlightTextColor' : '')
+  }`;
+  console.log(defaultStyle);
+  console.log(animationStyle);
+  const [style, setStyle] = useState(defaultStyle);
 
   function getStyle() {
     return setTimeout(() => {
       if (style.includes('animate-pulse')) {
-        setStyle('cursor-pointer inline-block');
+        setStyle(defaultStyle);
       } else {
-        setStyle(style + ' animate-once animate-pulse animate-ease-in');
+        setStyle(animationStyle);
       }
-    }, Math.floor(Math.random() * 23) * 1000);
+    }, Math.floor(Math.random() * 27) * 1000);
   }
 
   useEffect(() => {

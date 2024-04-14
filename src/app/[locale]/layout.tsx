@@ -30,7 +30,7 @@ export default function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className="bg-bgColor text-textColor transition-background-color animate-fade">
+      <body className="flex justify-center items-center bg-bgColor text-textColor transition-background-color animate-fade">
         <script dangerouslySetInnerHTML={{ __html: settingModeScript }} />
         <ThemeProvider attribute="class">
           <Header locale={locale} />

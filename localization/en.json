@@ -1,9 +1,21 @@
 {
   "about": {
-    "text_1": "I'm Hyunsoo, a developer seeking charming interfaces.",
+    "text_1": {
+      "_1": "I'm Hyunsoo, a developer ",
+      "_2": ".",
+      "var_1": "seeking charming interfaces"
+    },
     "text_2": "I recently worked at LG Electronics as a web and app developer, employed by Rayslon Company.",
-    "text_3": "I'm confident in front-end technologies like JavaScript, React, and Next, but I also have experience with back-end technologies.",
-    "text_4": "I may not be exceptionally talented, but I will do well.",
+    "text_3": {
+      "_1": "I'm ",
+      "_2": " front-end technologies like JavaScript, React, and Next, but I also have experience with back-end technologies.",
+      "var_1": "confident in"
+    },
+    "text_4": {
+      "_1": "I may not be exceptionally talented, but ",
+      "_2": ".",
+      "var_1": "I will do well"
+    },
     "text_5": {
       "_1": "I love nature like ",
       "_2": ",",
@@ -17,9 +29,17 @@
       "var_6": "mille crepes",
       "var_7": "and doughnuts."
     },
-    "text_6": "Very interested in receiving assistance from GPT-4.",
+    "text_6": {
+      "_1": "Very interested in receiving assistance from ",
+      "_2": ".",
+      "var_1": "GPT-4"
+    },
     "text_7": "Instead of racing towards goals in a sweat, I prefer to advance steadily, step by step.",
-    "text_8": "I perform better when I'm not under pressure, often finding that the best ideas come to me the next day:)"
+    "text_8": {
+      "_1": "I perform better when I'm not under pressure, often finding that the best ideas come to me ",
+      "_2": ".",
+      "var_1": "the next day:)"
+    }
   },
   "career": {},
   "utils": {

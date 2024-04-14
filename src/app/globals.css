@@ -25,7 +25,7 @@
   --secondColor: #ecb653;
   /* secondColor 후보 : ecb653, a96cc8*/
   --textColor: #37253e;
-  --highlightTextColor: '#b387cf';
+  --highlightTextColor: #b387cf;
   /* highlightTextColor 후보 : b387cf, a087cf */
   --borderColor: #ecb653;
   /* borderColor 후보 : 392f40, 37253e, ecb653, a96cc8 */
@@ -39,7 +39,7 @@
   /* secondColor 후보 : 392f40, 43384b, 42374a  */
   --textColor: white;
   /* textColor 후보 : #eae4ed, */
-  --highlightTextColor: '#b387cf';
+  --highlightTextColor: #b387cf;
   /* highlightTextColor 후보 : b387cf, ac87cf, a087cf */
   --borderColor: white;
 }

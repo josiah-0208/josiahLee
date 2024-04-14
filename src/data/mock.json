@@ -1,4 +1,9 @@
 {
+  "pageArr": [
+    { "pageName": "ABOUT", "url": "/" },
+    { "pageName": "CAREER", "url": "/career" },
+    { "pageName": "FLAGS", "url": "/flags" }
+  ],
   "linkIconData": [
     {
       "src": "/static/images/icon_google.svg",

@@ -51,10 +51,28 @@ function Introduction({}: Props) {
             />
           </div>
           <div className="w-[528px] flex flex-col gap-2.5">
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_1')}</p>
+            <p className="whitespace-pre-wrap leading-relaxed">
+              {t('text_1._1')}
+              <span className="text-highlightTextColor">
+                {t('text_1.var_1')}
+              </span>
+              {t('text_1._2')}
+            </p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_2')}</p>
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_3')}</p>
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_4')}</p>
+            <p className="whitespace-pre-wrap leading-relaxed">
+              {t('text_3._1')}
+              <span className="text-highlightTextColor">
+                {t('text_3.var_1')}
+              </span>
+              {t('text_3._2')}
+            </p>
+            <p className="whitespace-pre-wrap leading-relaxed">
+              {t('text_4._1')}
+              <span className="text-highlightTextColor">
+                {t('text_4.var_1')}
+              </span>
+              {t('text_4._2')}
+            </p>
           </div>
         </div>
         <div className="flex justify-end items-center gap-[32px]">
@@ -65,6 +83,7 @@ function Introduction({}: Props) {
                 text={t('text_5.var_1')}
                 setImgUrl={setProfileImgUrl}
                 onEnterUrl="/static/images/mountain.jpg"
+                highlight={true}
               />
               {t('text_5._2')}&nbsp;
               <HoverATag
@@ -105,9 +124,21 @@ function Introduction({}: Props) {
               />
               {t('text_5._4')}
             </p>
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_6')}</p>
+            <p className="whitespace-pre-wrap leading-relaxed">
+              {t('text_6._1')}
+              <span className="text-highlightTextColor">
+                {t('text_6.var_1')}
+              </span>
+              {t('text_6._2')}
+            </p>
             <p className="whitespace-pre-wrap leading-relaxed">{t('text_7')}</p>
-            <p className="whitespace-pre-wrap leading-relaxed">{t('text_8')}</p>
+            <p className="whitespace-pre-wrap leading-relaxed">
+              {t('text_8._1')}
+              <span className="text-highlightTextColor">
+                {t('text_8.var_1')}
+              </span>
+              {t('text_8._2')}
+            </p>
           </div>
           <div className="w-[224px] h-[224px] flex flex-col justify-evenly bg-secondColor rounded-2xl border-2 border-borderColor">
             <div className="flex justify-evenly">
@@ -148,62 +179,55 @@ function Introduction({}: Props) {
 
 export default Introduction;
 
-console.log(
-  `%c
-  ██     ██ ███████                                  
-  ██     ██ ██                                       
-  ██  █  ██ █████                                    
-  ██ ███ ██ ██                                       
-   ███ ███  ███████                                  
-                                                     
-                                                     
-  ██     ██ ██ ██      ██                            
-  ██     ██ ██ ██      ██                            
-  ██  █  ██ ██ ██      ██                            
-  ██ ███ ██ ██ ██      ██                            
-   ███ ███  ██ ███████ ███████                       
-                                                     
-                                                     
-  ███████ ██ ███    ██ ██████                        
-  ██      ██ ████   ██ ██   ██                       
-  █████   ██ ██ ██  ██ ██   ██                       
-  ██      ██ ██  ██ ██ ██   ██                       
-  ██      ██ ██   ████ ██████                        
-                                                     
-                                                     
-   █████                                             
-  ██   ██                                            
-  ███████                                            
-  ██   ██                                            
-  ██   ██                                            
-                                                     
-                                                     
-  ██     ██  █████  ██    ██                         
-  ██     ██ ██   ██  ██  ██                          
-  ██  █  ██ ███████   ████                           
-  ██ ███ ██ ██   ██    ██                            
-   ███ ███  ██   ██    ██    ▄█                      
-                                                     
-                                                     
-  ██     ██ ███████                                  
-  ██     ██ ██                                       
-  ██  █  ██ █████                                    
-  ██ ███ ██ ██                                       
-   ███ ███  ███████                                  
-                                                     
-                                                     
-   █████  ██      ██     ██  █████  ██    ██ ███████ 
-  ██   ██ ██      ██     ██ ██   ██  ██  ██  ██      
-  ███████ ██      ██  █  ██ ███████   ████   ███████ 
-  ██   ██ ██      ██ ███ ██ ██   ██    ██         ██ 
-  ██   ██ ███████  ███ ███  ██   ██    ██    ███████ 
-                                                     
-                                                     
-  ██   ██  █████  ██    ██ ███████                   
-  ██   ██ ██   ██ ██    ██ ██                        
-  ███████ ███████ ██    ██ █████                     
-  ██   ██ ██   ██  ██  ██  ██                        
-  ██   ██ ██   ██   ████   ███████                   
-  `,
-  'color:orange'
-);
+// console.log(
+//   `%c
+//   ██     ██ ███████
+//   ██     ██ ██
+//   ██  █  ██ █████
+//   ██ ███ ██ ██
+//    ███ ███  ███████
+
+//   ██     ██ ██ ██      ██
+//   ██     ██ ██ ██      ██
+//   ██  █  ██ ██ ██      ██
+//   ██ ███ ██ ██ ██      ██
+//    ███ ███  ██ ███████ ███████
+
+//   ███████ ██ ███    ██ ██████
+//   ██      ██ ████   ██ ██   ██
+//   █████   ██ ██ ██  ██ ██   ██
+//   ██      ██ ██  ██ ██ ██   ██
+//   ██      ██ ██   ████ ██████
+
+//    █████
+//   ██   ██
+//   ███████
+//   ██   ██
+//   ██   ██
+
+//   ██     ██  █████  ██    ██
+//   ██     ██ ██   ██  ██  ██
+//   ██  █  ██ ███████   ████
+//   ██ ███ ██ ██   ██    ██
+//    ███ ███  ██   ██    ██    ▄█
+
+//   ██     ██ ███████
+//   ██     ██ ██
+//   ██  █  ██ █████
+//   ██ ███ ██ ██
+//    ███ ███  ███████
+
+//    █████  ██      ██     ██  █████  ██    ██ ███████
+//   ██   ██ ██      ██     ██ ██   ██  ██  ██  ██
+//   ███████ ██      ██  █  ██ ███████   ████   ███████
+//   ██   ██ ██      ██ ███ ██ ██   ██    ██         ██
+//   ██   ██ ███████  ███ ███  ██   ██    ██    ███████
+
+//   ██   ██  █████  ██    ██ ███████
+//   ██   ██ ██   ██ ██    ██ ██
+//   ███████ ███████ ██    ██ █████
+//   ██   ██ ██   ██  ██  ██  ██
+//   ██   ██ ██   ██   ████   ███████
+//   `,
+//   'color:orange'
+// );
