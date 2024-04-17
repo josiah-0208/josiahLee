@@ -6,7 +6,7 @@ export default function About() {
   const messages = useMessages();
 
   return (
-    <main className="flex h-full w-full items-center justify-center">
+    <main className="w-full h-full flex md:flex-col items-center justify-center animate-fade">
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Introduction />
       </NextIntlClientProvider>

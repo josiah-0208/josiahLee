@@ -24,8 +24,6 @@ function HoverATag({
     ' animate-once animate-pulse animate-ease-in ' +
     (highlight ? 'text-highlightTextColor' : '')
   }`;
-  console.log(defaultStyle);
-  console.log(animationStyle);
   const [style, setStyle] = useState(defaultStyle);
 
   function getStyle() {
@@ -35,7 +33,7 @@ function HoverATag({
       } else {
         setStyle(animationStyle);
       }
-    }, Math.floor(Math.random() * 27) * 1000);
+    }, Math.floor(Math.random() * 23) * 1000);
   }
 
   useEffect(() => {
