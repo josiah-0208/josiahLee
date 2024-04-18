@@ -9,7 +9,7 @@ function NavBar({}: Props) {
   const pagArr = mockData.pageArr;
 
   return (
-    <div>
+    <div className="flex gap-4">
       {pagArr.map((page) => (
         <NavItem pageItem={page} key={page.pageName} />
       ))}
