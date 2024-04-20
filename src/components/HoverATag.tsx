@@ -33,7 +33,7 @@ function HoverATag({
       } else {
         setStyle(animationStyle);
       }
-    }, Math.floor(Math.random() * 23) * 1000);
+    }, Math.floor(Math.random() * 18) * 1000);
   }
 
   useEffect(() => {

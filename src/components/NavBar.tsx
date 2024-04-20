@@ -1,17 +1,18 @@
+'use client';
 import React from 'react';
 import mockData from '../data/mock.json';
-import { Link } from '@/navigation';
-// import Link from 'next/link';
+import { Link, usePathname } from '@/navigation';
 
 type Props = {};
 
 function NavBar({}: Props) {
-  const pagArr = mockData.pageArr;
+  const pageArr = mockData.pageArr;
+  const currPage = usePathname();
 
   return (
     <div className="flex gap-4">
-      {pagArr.map((page) => (
-        <NavItem pageItem={page} key={page.pageName} />
+      {pageArr.map((page) => (
+        <NavItem pageItem={page} key={page.pageName} currPage={currPage} />
       ))}
     </div>
   );
@@ -19,6 +20,17 @@ function NavBar({}: Props) {
 
 export default NavBar;
 
-function NavItem({ pageItem }: any) {
-  return <Link href={pageItem.url}>{pageItem.pageName}</Link>;
+function NavItem({ pageItem, currPage }: any) {
+  return (
+    <Link
+      className={
+        currPage === pageItem.url
+          ? 'text-highlightTextColor border-b-[1px] border-highlightTextColor animate-fade'
+          : ''
+      }
+      href={pageItem.url}
+    >
+      {pageItem.pageName}
+    </Link>
+  );
 }
