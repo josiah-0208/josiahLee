@@ -6,7 +6,15 @@ export default function Career() {
 
   return (
     <main className="flex flex-col">
-      <Link href="/">홈으로 가는 버튼</Link>
+      <p className="text-2xl">
+        <strong>
+          We will find a way,
+          <br /> We always have
+        </strong>
+      </p>
+      <p>works</p>
+      <p>projects</p>
+      <div className="w-[768px]"></div>
     </main>
   );
 }
