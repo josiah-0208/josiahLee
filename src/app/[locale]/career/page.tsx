@@ -1,3 +1,4 @@
+import Card from '@/components/career/Card';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -12,9 +13,12 @@ export default function Career() {
           <br /> We always have
         </strong>
       </p>
-      <p>works</p>
+      <p>career</p>
+      <div className="w-[768px] flex">
+        <Card />
+        <Card />
+      </div>
       <p>projects</p>
-      <div className="w-[768px]"></div>
     </main>
   );
 }

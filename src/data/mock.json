@@ -40,5 +40,45 @@
       "height": 36,
       "url": "https://josiah0208.tistory.com/"
     }
+  ],
+  "careerItems": [
+    {
+      "title": "LG전자 HomeIoT플랫폼개발팀 프론트 개발",
+      "imgSrc": "",
+      "content": "",
+      "skillCategories": []
+    },
+    {
+      "title": "JAVA 백엔드 과정",
+      "imgSrc": "",
+      "content": "6개월간 JAVA 기반 백엔드 과정입니다.",
+      "skillCategories": ["JAVA", "Oracle", "Spring"]
+    }
+  ],
+  "projectItems": [
+    {
+      "title": "개인 홈페이지",
+      "imgSrc": "",
+      "content": "6개월간 JAVA 기반 백엔드 과정입니다. ",
+      "skillCategories": ["JSP", "Oracle", "Spring"]
+    },
+    {
+      "title": "GPT가 얼마나 좋을까",
+      "imgSrc": "",
+      "content": "6개월간 JAVA 기반 백엔드 과정입니다. ",
+      "skillCategories": ["GPT-4", "Python", "React"]
+    },
+    {
+      "title": "쇼핑몰 프로젝트 - 풋사과",
+      "imgSrc": "",
+      "content": "최종 평가에서 1등을 소수였지만, 백엔드 과정이었지만 2명이서 화면단 기술과 AWS 학습해 6개월 간 함께한 강사님께 평가 1등을 받을 수 있었던 프로젝트입니다.",
+      "skillCategories": ["React", "SpringBoot", "Oracle", "AWS", "EC2"]
+    },
+    {
+      "title": "",
+      "imgSrc": "",
+      "content": "6개월간 JAVA 기반 백엔드 과정입니다. ",
+      "skillCategories": ["JSP", "Oracle", "Spring"]
+    }
   ]
 }
