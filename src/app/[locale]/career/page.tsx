@@ -1,9 +1,11 @@
 import Card from '@/components/career/Card';
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import mockData from '../../../data/mock.json';
 
 export default function Career() {
   const t = useTranslations('career');
+  const careerItems = mockData.careerItems;
+  const projectItems = mockData.projectItems;
 
   return (
     <main className="flex flex-col">
@@ -14,11 +16,17 @@ export default function Career() {
         </strong>
       </p>
       <p>career</p>
-      <div className="w-[768px] flex">
-        <Card />
-        <Card />
+      <div className="w-[768px] flex justify-between flex-wrap">
+        {careerItems.map((item) => (
+          <Card cardItem={item} key={item.title} />
+        ))}
       </div>
       <p>projects</p>
+      <div className="w-[768px] flex justify-between flex-wrap">
+        {projectItems.map((item) => (
+          <Card cardItem={item} key={item.title} />
+        ))}
+      </div>
     </main>
   );
 }
